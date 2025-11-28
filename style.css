@@ -23,14 +23,14 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     sans-serif;
 
-  /* Calm cool blue background */
-  background: radial-gradient(
-    circle at top left,
-    #bfdbfe 0%,
-    #93c5fd 35%,
-    #60a5fa 70%,
-    #3b82f6 100%
-  );
+ /* Calm green background */
+background: radial-gradient(
+  circle at top left,
+  #d9f7e6 0%,
+  #b7edcf 35%,
+  #8fddb8 70%,
+  #6acaa2 100%
+);
 
   color: var(--text);
   line-height: 1.6;
