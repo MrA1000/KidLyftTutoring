@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>KidLyft Tutoring – K–5 Math & Reading Support</title>
+  <meta name="description" content="KidLyft Tutoring helps K–5 students build confidence in math, reading, and homework with calm, personalized support." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="brand">   
+        <div class="logo-circle">KL</div>
+        <div class="brand-text">
+          <div class="brand-title">KidLyft Tutoring</div>
+          <div class="brand-subtitle">
+            Gentle, confidence-building help for K–5 students
+          </div>
+        </div>
+      </div>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        Now enrolling new students
+      </div>
+    </header>
+
+    <section class="hero">
+      <!-- Left side -->
+      <div class="hero-left">
+        <div class="eyebrow">Personalized tutoring</div>
+        <h1 class="hero-title">
+          Lift your child’s <span>confidence</span> in learning.
+        </h1>
+        <p class="hero-subtitle">
+          KidLyft offers calm, patient support in math, reading, and homework
+          skills — for kids who need a little extra help, structure, or a
+          kinder pace.
+        </p>
+
+        <div class="hero-meta">
+          <span>✅ K–5 math, reading & homework support</span>
+          <span>
+            Online & local
+            <small>Flexible scheduling for busy families</small>
+          </span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="scrollToForm()">
+            Book a free consult
+          </button>
+          <button class="btn-secondary" onclick="scrollToPrograms()">
+            View programs
+          </button>
+        </div>
+
+        <p class="hero-note">
+          No pressure, no contracts — just a quick call to see if it’s a good
+          fit.
+        </p>
+      </div>
+
+      <!-- Right side: booking card -->
+      <div class="booking-card" id="booking-card">
+        <div class="booking-header">
+          <div>
+            <h2>Request a free parent call</h2>
+            <p>Share a few details and we’ll follow up soon.</p>
+          </div>
+          <span class="badge">Free consult</span>
+        </div>
+
+        <!-- 🔵 FORM: uses FormSubmit -->
+        <!-- Replace YOUR_FORM_ID with your real FormSubmit ID or email -->
+        <form id="contact-form" action="https://formsubmit.co/nourabid99@gmail.com" method="POST">
+          <!-- FormSubmit options -->
+          <input type="hidden" name="_subject" value="New KidLyft Tutoring Inquiry" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Optional: redirect after submit
+            <input type="hidden" name="_next" value="https://kidlyfttutoring.netlify.app/thank-you.html" />
+            -->
+
+          <div class="field-group">
+            <label>
+              Parent / guardian name
+              <span class="meta">Required</span>
+            </label>
+            <input type="text" name="parent_name" placeholder="Your name" required />
+          </div>
+
+          <div class="inline-fields">
+            <div class="field-group">
+              <label>
+                Phone number
+                <span class="meta">Required</span>
+              </label>
+              <input type="tel" name="phone" placeholder="(555) 123-4567" required />
+            </div>
+            <div class="field-group">
+              <label>
+                Email
+                <span class="meta">Optional</span>
+              </label>
+              <input type="email" name="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="inline-fields">
+            <div class="field-group">
+              <label>
+                Child’s name
+                <span class="meta">First name is enough</span>
+              </label>
+              <input type="text" name="child_name" placeholder="Child’s name" />
+            </div>
+            <div class="field-group">
+              <label>
+                Grade
+                <span class="meta">K–5</span>
+              </label>
+              <select name="grade">
+                <option value="" selected disabled>Select grade</option>
+                <option>Kindergarten</option>
+                <option>1st grade</option>
+                <option>2nd grade</option>
+                <option>3rd grade</option>
+                <option>4th grade</option>
+                <option>5th grade</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>
+              Main focus area
+              <span class="meta">You can choose more later</span>
+            </label>
+            <select name="focus">
+              <option value="" selected disabled>Choose one</option>
+              <option>Math confidence & skills</option>
+              <option>Reading & comprehension</option>
+              <option>Homework help / organization</option>
+              <option>Test prep / quizzes</option>
+              <option>Multiple areas / not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>
+              Anything you’d like us to know?
+              <span class="meta">Optional</span>
+            </label>
+            <textarea name="message" placeholder="Example: Struggles with word problems, gets anxious, needs gentle support."></textarea>
+          </div>
+
+          <div class="field-group">
+            <label>
+              Preferred days / times
+              <span class="meta">Optional</span>
+            </label>
+            <input type="text" name="preferred_time" placeholder="Example: Weekdays after 4pm, Saturday mornings" />
+          </div>
+
+          <div class="helper-row">
+            <div class="secure-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                <path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z" />
+              </svg>
+              <span>Your info goes straight to the tutor and stays private.</span>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="btn-primary">
+              Send my request
+            </button>
+            <p class="status" id="form-status">
+              <!-- FormSubmit will redirect or show its own message.
+                     You can also leave this blank. -->
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Programs / Services -->
+    <section id="programs">
+      <div class="section-heading">Programs</div>
+      <div class="section-card section-card-grid">
+        <div>
+          <h2 class="section-title">Support that fits your child.</h2>
+          <p class="section-subtitle">
+            KidLyft sessions are gentle, structured, and paced for kids who
+            need time to process and feel safe asking questions.
+          </p>
+
+          <ul class="bullet-list">
+            <li>
+              <span class="bullet-dot"></span>
+              <span><strong>Math lift:</strong> number sense, word problems, fractions, and more.</span>
+            </li>
+            <li>
+              <span class="bullet-dot"></span>
+              <span><strong>Reading lift:</strong> decoding, fluency, and comprehension practice.</span>
+            </li>
+            <li>
+              <span class="bullet-dot"></span>
+              <span><strong>Homework hub:</strong> weekly support to get assignments done calmly.</span>
+            </li>
+            <li>
+              <span class="bullet-dot"></span>
+              <span><strong>Executive skills:</strong> planning, organizing, and following directions.</span>
+            </li>
+          </ul>
+
+          <p class="muted-note">
+            Sessions can be once a week or more often, depending on your
+            child’s needs and your schedule.
+          </p>
+        </div>
+
+        <div>
+          <div class="pill-row">
+            <span class="mini-pill">K–5 students</span>
+            <span class="mini-pill">Online & local</span>
+            <span class="mini-pill">Calm, patient tutor</span>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <strong>1:1</strong>
+              Fully personalized support
+            </div>
+            <div class="stat">
+              <strong>60</strong>
+              Minute sessions (typical)
+            </div>
+            <div class="stat">
+              <strong>100%</strong>
+              Focus on confidence
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why KidLyft -->
+    <section>
+      <div class="section-heading">Why KidLyft</div>
+      <div class="section-card">
+        <h2 class="section-title">A gentler way to grow skills.</h2>
+        <p class="section-subtitle">
+          Some kids don’t need more pressure — they need a calm adult who
+          understands when they freeze, melt down, or say “I can’t.”
+        </p>
+
+        <ul class="bullet-list">
+          <li>
+            <span class="bullet-dot"></span>
+            <span>Kind, patient approach for sensitive or anxious learners.</span>
+          </li>
+          <li>
+            <span class="bullet-dot"></span>
+            <span>Short breaks and check-ins to avoid overwhelm.</span>
+          </li>
+          <li>
+            <span class="bullet-dot"></span>
+            <span>Simple explanations, not school jargon.</span>
+          </li>
+          <li>
+            <span class="bullet-dot"></span>
+            <span>Regular parent communication so you’re not guessing.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="section-heading">FAQ</div>
+      <div class="section-card">
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-q">Which grades do you work with?</div>
+            <div class="faq-a">
+              Most students are K–5. If your child is slightly outside this
+              range, you can still reach out and we’ll let you know if it’s a
+              match.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Are sessions online or in person?</div>
+            <div class="faq-a">
+              Sessions can be online (video) or local in-person depending on
+              location and scheduling. We’ll talk about what works best for
+              your child.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">How does pricing work?</div>
+            <div class="faq-a">
+              Rates depend on session length and frequency. We’ll share clear
+              pricing during your free consult, with no pressure to commit.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What if my child is very shy or resistant?</div>
+            <div class="faq-a">
+              That’s okay and very common. We start slow, build trust, and
+              focus on small wins so your child doesn’t feel pushed too hard,
+              too fast.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> KidLyft Tutoring.</span>
+      <span>Helping kids feel safe with learning.</span>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
